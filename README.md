@@ -7,8 +7,8 @@ This is a website to showcase my projects.
 This application requires Nodejs v18.19+.
 
 ```bash
-git clone https://github.com/KieranSutherland/KieranSutherland.github.io.git
-cd KieranSutherland.github.io
+git clone https://github.com/KieranSutherland/kieransutherland.github.io.git
+cd kieransutherland.github.io
 npm install
 npm run dev
 ```
