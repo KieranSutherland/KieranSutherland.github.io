@@ -25,6 +25,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: Setup tmate session
+        uses: mxschmitt/action-tmate@v3
       - name: Checkout
         uses: actions/checkout@v4
       - name: Detect package manager
