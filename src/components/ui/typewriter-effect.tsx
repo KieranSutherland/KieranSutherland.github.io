@@ -15,10 +15,6 @@ export interface TypewriterEffectSmoothProps {
 }
 
 export function TypewriterEffectSmooth({ words, className, cursorClassName }: TypewriterEffectSmoothProps) {
-    const [mounted, setMounted] = React.useState(false);
-    React.useEffect(() => {
-        setMounted(true)
-    }, [])
     const processedWords = React.useMemo(() => {
         const wordsArray = words.map((word) => {
             return {
@@ -46,10 +42,6 @@ export function TypewriterEffectSmooth({ words, className, cursorClassName }: Ty
             </div>
         );
     }, [words]);
-
-    if (!mounted) {
-        return null;
-    }
 
     return (
         <div className={cn("flex space-x-1 my-6", className)}>
