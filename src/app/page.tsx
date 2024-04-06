@@ -1,24 +1,54 @@
 "use client";
-import { Navbar } from "@/components/ui/navbar-menu";
-import { Boxes } from "@/components/ui/background-boxes";
-import { cn } from "@/utils/cn";
+import { RoundButton } from "@/components/ui/round-button";
+import { SpecialArrowButton } from "@/components/ui/special-arrow-button";
+import { TypewriterEffectSmooth, TypewriterEffectSmoothProps } from "@/components/ui/typewriter-effect";
+
+const subtitleWords: TypewriterEffectSmoothProps['words'] = [
+    {
+        text: "I'm"
+    },
+    {
+        text: "a"
+    },
+    {
+        text: "Software",
+        className: "text-primary"
+    },
+    {
+        text: "Engineer,",
+        className: "text-primary",
+        indicesToIgnoreClassName: [8]
+    },
+    {
+        text: "with"
+    },
+    {
+        text: "an"
+    },
+    {
+        text: "enthusiasm"
+    },
+    {
+        text: "for"
+    },
+    {
+        text: "frontend"
+    },
+]
 
 export default function Home() {
     return (
-        <main className="flex min-h-screen flex-col items-center justify-between p-24">
-            <Navbar className="top-2" />
-            <div className="h-96 relative w-full overflow-hidden bg-slate-900 flex flex-col items-center justify-center rounded-lg">
-                <div className="absolute inset-0 w-full h-full bg-slate-900 z-20 [mask-image:radial-gradient(transparent,white)] pointer-events-none" />
-
-                <Boxes />
-                <h1 className={cn("md:text-4xl text-xl text-white relative z-20")}>
-                    Tailwind is Awesome
-                </h1>
-                <p className="text-center mt-2 text-neutral-300 relative z-20">
-                    Framer motion is the best animation library ngl
-                </p>
+        <div className="absolute z-50 inset-0 flex flex-col gap-20 items-center justify-center px-4 pointer-events-none text-center p-24">
+            <p className="text-white stroke-slate-700 stroke-2 font-bold bg-clip-text drop-shadow-2xl text-4xl md:text-5xl lg:text-8xl">
+                Hi, I'm Kieran
+            </p>
+            <div className="text-gray-100 bg-clip-text drop-shadow-2xl lg:text-4xl">
+                <TypewriterEffectSmooth
+                    words={subtitleWords}
+                    cursorClassName="bg-gray-300"
+                />
             </div>
-
-        </main>
+            <RoundButton text="Browse projects" />
+        </div>
     );
 }
