@@ -92,7 +92,7 @@ export function Tabs({
                         layoutId="clickedbutton"
                         transition={{ type: "spring", bounce: 0.3, duration: 0.6 }}
                         className={cn(
-                            "absolute inset-0 bg-black  rounded-full ",
+                            "absolute inset-0 bg-black  rounded-full",
                             activeTabClassName
                         )}
                     />
@@ -106,16 +106,17 @@ export function Tabs({
     }, [propTabs, tabClassName, activeTabClassName, active]);
 
     return (
-        <div className="divide-y divide-dotted">
+        <div className="h-full w-full flex flex-col">
             <div
                 className={cn(
-                    "flex flex-row items-center justify-start [perspective:1000px] relative overflow-auto sm:overflow-visible no-visible-scrollbar max-w-full w-full pb-5",
+                    "flex flex-row items-center justify-start [perspective:1000px] relative overflow-auto sm:overflow-visible no-visible-scrollbar max-w-full w-full",
                     containerClassName
                 )}
             >
                 {processedTabs}
             </div>
-            <div className="h-full w-full flex pt-5">
+            <hr className="h-px my-5 bg-gray-200 border-1 shadow-2xl" />
+            <div className="h-full w-full flex box-border">
                 {active.content}
             </div>
         </div>

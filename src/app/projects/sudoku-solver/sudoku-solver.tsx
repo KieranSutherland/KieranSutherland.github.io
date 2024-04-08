@@ -1,4 +1,4 @@
-import { ProjectTab } from "./project-tab";
+import { ProjectTab } from "../project-tab";
 import SudokuExample from "./sudoku_solver.png";
 
 const description = `This is an augmented reality sudoku solver. Point any unsolved sudoku puzzle at the camera, it will programatically resolve the edges of the 9x9 square and disect each cell individually into a list.

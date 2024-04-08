@@ -1,8 +1,8 @@
 import { Tab, Tabs } from "@/components/ui/tabs";
-import { SudokuSolver } from "./sudoku-solver";
-import { Skrawl } from "./skrawl";
-import { Portfolio } from "./portfolio";
-import { DiscordBot } from "./discord-bot";
+import { SudokuSolver } from "./sudoku-solver/sudoku-solver";
+import { Skrawl } from "./skrawl/skrawl";
+import { Portfolio } from "./portfolio/portfolio";
+import { DiscordBot } from "./discord-bot/discord-bot";
 
 const tabs: Tab[] = [
     {

@@ -22,7 +22,7 @@ export function ProjectTab(props: ProjectTabProps) {
     const { src, alt, className } = previewImage;
     return (
         <div className="h-full w-full flex flex-row justify-between gap-8">
-            <p className="text-white lg:text-2xl font-normal whitespace-pre-wrap items-center flex flex-[2] justify-center">
+            <p className="text-white text-xl font-normal whitespace-pre-wrap items-center flex flex-[2] text-left">
                 {description}
             </p>
             <div className="flex flex-col justify-between items-center">
