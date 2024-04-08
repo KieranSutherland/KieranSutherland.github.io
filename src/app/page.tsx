@@ -1,6 +1,7 @@
 "use client";
-import { RoundButton } from "@/components/ui/round-button";
+import { HoverBorderGradient } from "@/components/ui/hover-border-gradient";
 import { TypewriterEffectSmooth, TypewriterEffectSmoothProps } from "@/components/ui/typewriter-effect";
+import Link from "next/link";
 
 const subtitleWords: TypewriterEffectSmoothProps['words'] = [
     {
@@ -37,17 +38,25 @@ const subtitleWords: TypewriterEffectSmoothProps['words'] = [
 
 export default function Home() {
     return (
-        <div className="absolute z-50 inset-0 flex flex-col gap-20 items-center justify-center px-4 pointer-events-none text-center p-24">
-            <p className="text-white stroke-slate-700 stroke-2 font-bold bg-clip-text drop-shadow-2xl text-4xl md:text-5xl lg:text-8xl">
+        <>
+            <p className="text-white font-bold bg-clip-text drop-shadow-2xl text-4xl md:text-5xl lg:text-8xl">
                 {"Hi, I'm Kieran"}
             </p>
-            <div className="text-gray-100 bg-clip-text drop-shadow-2xl lg:text-4xl">
+            <div className="text-gray-100 bg-clip-text drop-shadow-2xl md:text-2xl lg:text-4xl font-medium">
                 <TypewriterEffectSmooth
                     words={subtitleWords}
                     cursorClassName="bg-gray-300"
                 />
             </div>
-            <RoundButton text="Browse projects" />
-        </div>
+            <Link href={`/projects`} className="pointer-events-auto">
+                <HoverBorderGradient
+                    containerClassName="rounded-full"
+                    as="button"
+                    className="px-6 py-3"
+                >
+                    {"Browse projects"}
+                </HoverBorderGradient>
+            </Link>
+        </>
     );
 }

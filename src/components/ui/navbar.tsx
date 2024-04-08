@@ -1,12 +1,13 @@
+import Link from "next/link";
 
 export function Navbar() {
     return (
         <header className="fixed w-full inset-x-0 z-50">
             <nav className="mx-auto flex max-w-7xl items-center justify-between p-8 lg:px-8" aria-label="Global">
                 <div className="flex lg:flex-1">
-                    <a href="" className="w-auto nav-bar-text">
+                    <Link href="/" className="w-auto text-lg font-semibold leading-6 nav-bar-text">
                         Kieran Sutherland
-                    </a>
+                    </Link>
                 </div>
                 <div className="flex lg:hidden">
                     <button type="button" className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-100">
@@ -17,8 +18,8 @@ export function Navbar() {
                     </button>
                 </div>
                 <div className="hidden lg:flex lg:gap-x-12">
-                    <a href="projects" className="text-sm font-semibold leading-6 nav-bar-text">Projects</a>
-                    <a href="links" className="text-sm font-semibold leading-6 nav-bar-text">Links</a>
+                    <Link href="projects" className="text-sm font-semibold leading-6 nav-bar-text">Projects</Link>
+                    <Link href="links" className="text-sm font-semibold leading-6 nav-bar-text">Links</Link>
                 </div>
             </nav>
             {/* Mobile menu, show/hide based on menu open state. */}
@@ -27,9 +28,9 @@ export function Navbar() {
                 <div className="fixed inset-0 z-10"></div>
                 <div className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
                     <div className="flex items-center justify-between">
-                        <a href="#" className="-m-1.5 p-1.5">
+                        <Link href="/" className="-m-1.5 p-1.5">
                             Kieran Sutherland
-                        </a>
+                        </Link>
                         <button type="button" className="-m-2.5 rounded-md p-2.5 text-gray-100">
                             <span className="sr-only">Close menu</span>
                             <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" aria-hidden="true">
@@ -51,9 +52,8 @@ export function Navbar() {
                                         </svg>
                                     </button>
                                 </div>
-                                <a href="#" className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 nav-bar-text hover:bg-gray-50">Features</a>
-                                <a href="#" className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 nav-bar-text hover:bg-gray-50">Marketplace</a>
-                                <a href="#" className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 nav-bar-text hover:bg-gray-50">Company</a>
+                                <Link href="projects" className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 nav-bar-text hover:bg-gray-50">Projects</Link>
+                                <Link href="links" className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 nav-bar-text hover:bg-gray-50">Links</Link>
                             </div>
                         </div>
                     </div>
