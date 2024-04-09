@@ -29,6 +29,6 @@ body {
     }
 
     .nav-bar-text {
-        @apply text-gray-300
+        @apply text-gray-200
     }
 }

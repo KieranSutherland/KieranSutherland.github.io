@@ -10,7 +10,7 @@ It functions as a way to exhibit my skills, as well as being a way to learn and 
 export function Portfolio() {
     return (
         <ProjectTab
-            githubUrlSuffix="kieransutherland.github.io"
+            repoUrlSuffix="kieransutherland.github.io"
             previewImage={{
                 src: PortfolioExample,
                 alt: "Portfolio example"

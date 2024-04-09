@@ -12,7 +12,7 @@ Commands are added/removed as we please, including sending random insults, playi
 export function DiscordBot() {
     return (
         <ProjectTab
-            githubUrlSuffix="DeanBot"
+            repoUrlSuffix="DeanBot"
             previewImage={{
                 src: DiscordBotExample,
                 alt: "Discord bot example"

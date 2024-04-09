@@ -12,7 +12,7 @@ At the end, it gives an overview starting from the original prompt all the way t
 export function Skrawl() {
     return (
         <ProjectTab
-            githubUrlSuffix="skrawl"
+            repoUrlSuffix="skrawl"
             previewImage={{
                 src: SkrawlExample,
                 alt: "Skrawl example"

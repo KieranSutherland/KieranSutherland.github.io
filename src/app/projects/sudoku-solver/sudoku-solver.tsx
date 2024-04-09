@@ -12,7 +12,7 @@ This process is looped multiple times per second to give the user a smooth exper
 export function SudokuSolver() {
     return (
         <ProjectTab
-            githubUrlSuffix="SudokuSolver"
+            repoUrlSuffix="SudokuSolver"
             previewImage={{
                 src: SudokuExample,
                 alt: "Sudoku working example"

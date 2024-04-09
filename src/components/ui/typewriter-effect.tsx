@@ -46,7 +46,7 @@ export function TypewriterEffectSmooth({ words, className, cursorClassName }: Ty
     return (
         <div className={cn("flex space-x-1 my-6", className)}>
             <motion.div
-                className="overflow-hidden pb-2"
+                className="overflow-hidden flex"
                 initial={{
                     width: "0%",
                 }}
@@ -62,6 +62,8 @@ export function TypewriterEffectSmooth({ words, className, cursorClassName }: Ty
                 <div
                     style={{
                         whiteSpace: "nowrap",
+                        display: 'flex',
+                        alignItems: 'center'
                     }}
                 >
                     {processedWords}
